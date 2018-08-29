@@ -162,6 +162,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">文章简介</h3>
+                            <div class="box-tools">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="">
+                                <textarea class="form-control" rows="5" id="postSummary" >
+                                    <#if post??>${post.postSummary?if_exists}</#if>
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -333,7 +350,8 @@
                         'postThumbnail': $('#selectImg')[0].src,
                         'cateList' : cateList.toString(),
                         'tagList' : $('#tagList').tagEditor('getTags')[0].tags.toString(),
-                        'allowComment' : $('#allowComment').val()
+                        'allowComment' : $('#allowComment').val(),
+                        'postSummary':$('#postSummary').val()
                     },
                     success: function (data) {
                         if(data.code==1){
