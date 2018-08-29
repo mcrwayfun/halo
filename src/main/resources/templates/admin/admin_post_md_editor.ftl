@@ -154,11 +154,12 @@
                         </div>
                         <div class="box-body">
                             <div>
-                                <#if post??>
-                                    <img src="${post.postThumbnail?default("/static/images/thumbnail.png")}" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">
-                                <#else >
-                                    <img src="/static/images/thumbnail.png" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">
-                                </#if>
+                                <#--<#if post??>-->
+                                    <#--<img src="${post.postThumbnail?default("/static/images/thumbnail.png")}" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
+                                <#--<#else >-->
+                                    <#--<img src="/static/images/thumbnail.png" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
+                                <#--</#if>-->
+                                    <input type="text" class="form-control input-lg" id="selectImg" name=""/><br>
                             </div>
                         </div>
                     </div>
@@ -347,7 +348,8 @@
                         'postUrl' : $('#postUrl').html().toString(),
                         'postContentMd': editor.getMarkdown(),
                         'postContent': editor.getHTML(),
-                        'postThumbnail': $('#selectImg')[0].src,
+                        // 'postThumbnail': $('#selectImg')[0].src,
+                        'postThumbnail': $('#selectImg').val(),
                         'cateList' : cateList.toString(),
                         'tagList' : $('#tagList').tagEditor('getTags')[0].tags.toString(),
                         'allowComment' : $('#allowComment').val(),
