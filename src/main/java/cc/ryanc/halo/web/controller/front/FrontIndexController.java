@@ -75,7 +75,7 @@ public class FrontIndexController extends BaseController {
         if (null == posts) {
             return this.renderNotFound();
         }
-        model.addAttribute("is_index",true);
+        model.addAttribute("is_index", true);
         model.addAttribute("posts", posts);
         return this.render("index");
     }
@@ -115,5 +115,10 @@ public class FrontIndexController extends BaseController {
         Page<Post> posts = postService.searchByKeywords(keyword, null);
         model.addAttribute("posts", posts);
         return this.render("index");
+    }
+
+    @GetMapping(value = "aboutme")
+    public String aboutme() {
+        return "themes/next/aboutme";
     }
 }

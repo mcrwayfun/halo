@@ -1,6 +1,6 @@
 <#compress >
-<#include "module/_macro.ftl">
-<@head title="${options.blog_title} | 后台管理：文章编辑"></@head>
+    <#include "module/_macro.ftl">
+    <@head title="${options.blog_title} | 后台管理：文章编辑"></@head>
 <div class="wrapper">
     <!-- 顶部栏模块 -->
     <#include "module/_header.ftl">
@@ -38,11 +38,11 @@
         <section class="content">
             <div class="row">
                 <div class="col-md-9">
-                    <#if post??>
+    <#if post??>
                         <input type="hidden" id="postId" name="postId" value="${post.postId?c}">
-                    <#else>
+    <#else>
                         <input type="hidden" id="postId" name="postId" value="">
-                    </#if>
+    </#if>
                     <div style="margin-bottom: 10px;">
                         <input type="text" class="form-control input-lg" id="post_title" name="post_title" placeholder="请输入文章标题" onblur="autoComplateUrl();" value="<#if post??>${post.postTitle}</#if>">
                     </div>
@@ -87,7 +87,7 @@
                             <button onclick="push(0)" class="btn btn-primary btn-sm pull-right " data-loading-text="发布中...">
                             <#if post??>
                                 更新
-                                <#else>
+                            <#else>
                                 发布
                             </#if>
                             </button>
@@ -154,17 +154,29 @@
                         </div>
                         <div class="box-body">
                             <div>
+<<<<<<< HEAD
                                 <#--<#if post??>-->
                                     <#--<img src="${post.postThumbnail?default("/static/images/thumbnail.png")}" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
                                 <#--<#else >-->
                                     <#--<img src="/static/images/thumbnail.png" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
                                 <#--</#if>-->
+=======
+                            <#--<#if post??>-->
+                            <#--<img src="${post.postThumbnail?default("/static/images/thumbnail.png")}" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
+                            <#--<#else >-->
+                            <#--<img src="/static/images/thumbnail.png" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
+                            <#--</#if>-->
+>>>>>>> 7fd2b89e007ade03e1ee59fb7c8cb6da8543392f
                                     <#if post??>
                                         <input type="text" class="form-control input-lg" id="selectImg" value="${post.postThumbnail}"/><br>
                                     <#else>
                                         <input type="text" class="form-control input-lg" id="selectImg" value="https://ws1.sinaimg.cn/large/0062R7s4gy1fuqz6iu79nj33uw2g6x6s.jpg"/><br>
                                     </#if>
+<<<<<<< HEAD
                                     
+=======
+
+>>>>>>> 7fd2b89e007ade03e1ee59fb7c8cb6da8543392f
                             </div>
                         </div>
                     </div>
@@ -441,5 +453,5 @@
     </div>
     <#include "module/_footer.ftl">
 </div>
-<@footer></@footer>
+    <@footer></@footer>
 </#compress>
