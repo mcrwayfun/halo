@@ -167,18 +167,18 @@ public class PostController extends BaseController {
         String msg = "发表成功";
         try {
             //提取摘要
-            int postSummary = 50;
-            if (StringUtils.isNotEmpty(HaloConst.OPTIONS.get(BlogPropertiesEnum.POST_SUMMARY.getProp()))) {
-                postSummary = Integer.parseInt(HaloConst.OPTIONS.get(BlogPropertiesEnum.POST_SUMMARY.getProp()));
-            }
-            //文章摘要
-            String summaryText = HtmlUtil.cleanHtmlTag(post.getPostContent());
-            if (summaryText.length() > postSummary) {
-                String summary = summaryText.substring(0, postSummary);
-                post.setPostSummary(summary);
-            } else {
-                post.setPostSummary(summaryText);
-            }
+ //           int postSummary = 50;
+ //           if (StringUtils.isNotEmpty(HaloConst.OPTIONS.get(BlogPropertiesEnum.POST_SUMMARY.getProp()))) {
+ //               postSummary = Integer.parseInt(HaloConst.OPTIONS.get(BlogPropertiesEnum.POST_SUMMARY.getProp()));
+ //           }
+ //           //文章摘要
+ //           String summaryText = HtmlUtil.cleanHtmlTag(post.getPostContent());
+ //           if (summaryText.length() > postSummary) {
+ //               String summary = summaryText.substring(0, postSummary);
+ //               post.setPostSummary(summary);
+ //           } else {
+ //               post.setPostSummary(summaryText);
+ //           }
             //添加文章时，添加文章时间和修改文章时间为当前时间，修改文章时，只更新修改文章时间
             if (null != post.getPostId()) {
                 Post oldPost = postService.findByPostId(post.getPostId()).get();
