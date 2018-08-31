@@ -154,29 +154,11 @@
                         </div>
                         <div class="box-body">
                             <div>
-<<<<<<< HEAD
-                                <#--<#if post??>-->
-                                    <#--<img src="${post.postThumbnail?default("/static/images/thumbnail.png")}" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
-                                <#--<#else >-->
-                                    <#--<img src="/static/images/thumbnail.png" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
-                                <#--</#if>-->
-=======
-                            <#--<#if post??>-->
-                            <#--<img src="${post.postThumbnail?default("/static/images/thumbnail.png")}" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
-                            <#--<#else >-->
-                            <#--<img src="/static/images/thumbnail.png" class="img-responsive img-thumbnail" id="selectImg" onclick="openAttach('selectImg')" style="cursor: pointer;">-->
-                            <#--</#if>-->
->>>>>>> 7fd2b89e007ade03e1ee59fb7c8cb6da8543392f
                                     <#if post??>
                                         <input type="text" class="form-control input-lg" id="selectImg" value="${post.postThumbnail}"/><br>
                                     <#else>
                                         <input type="text" class="form-control input-lg" id="selectImg" value="https://ws1.sinaimg.cn/large/0062R7s4gy1fuqz6iu79nj33uw2g6x6s.jpg"/><br>
                                     </#if>
-<<<<<<< HEAD
-                                    
-=======
-
->>>>>>> 7fd2b89e007ade03e1ee59fb7c8cb6da8543392f
                             </div>
                         </div>
                     </div>
